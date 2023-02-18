@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root{
+    --cor-fundo: #1A120B;
+    --cor-usuario_senha: #FFFFFF;
+    --cor-boxlogin: #D5CEA3;
+    --cor-hover: #5a4836;
+    --cor-shadow: #000000;
+
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'font-family: 'Poppins', sans-serif';
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    padding: 2% 0 0 12%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+    justify-content: right;
+    margin: 20px;
+}
+
+.cabecalho__menu__link{
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    box-shadow: 0px 10px 10px var(--cor-shadow);
+    background: var(--cor-boxlogin);
+    margin: 10px 130px 20px 0;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: var(--cor-fundo);
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: 1px solid var(--cor-usuario_senha)
+}
+
+.main__login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left__login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left__login > h1{
+    font-size: 3vw;
+    color: var(--cor-boxlogin);
+    font-family: var(--fonte-principal);
+}
+
+.right__login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 25px;
+    background: var(--cor-boxlogin);
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px var(--cor-shadow); /* 1° valor = esquerda/direita, 2° valor = cima/baixo, 3° valor = blur, 4° valor = cor*/
+    font-family: var(--cor-shadow);
+    font-weight: 600;
+    margin: 0;
+    font-family: var(--fonte-principal);
+}
+
+
+.text__field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.text__field > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--cor-usuario_senha);
+    color: var(--cor-shadow);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px var(--cor-shadow);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.text__field > label{
+    font-family: var(--fonte-principal);
+    color: var(--cor-shadow);
+    margin-bottom: 10px;
+}
+
+.text__field > input::placeholder {
+    color: var(--cor-fundo);
+}
+
+.btn__login{
+    padding: 15px 10px;
+    width: 100%;
+    margin: 50px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    text-transform: uppercase;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    letter-spacing: 4px;
+    background: var(--cor-usuario_senha);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px var(--cor-shadow);
+}
+
+.btn__login:hover{
+    background-color: var(--cor-hover);
+}
+
+
+
+.img__login{
+    width: 38vw;
+    margin: 60px;
+}
+
+@media (max-width: 900px){
+    .main__login{
+        flex-direction: column;
+    }
+    .left__login > h1{
+        display: none;
+    }
+    .left__login{
+        width: 100%;
+        height: auto;
+    }
+    .right__login{
+        width: 80%;
+        height: auto;
+    }
+    .img__login{
+        width: 50vw;
+    }
+    .card__login{
+        width: 90%;
+    }
+    .cabecalho__menu__link{
+        display: none;
+}
+}
